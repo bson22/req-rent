@@ -1,0 +1,197 @@
+/* Space out content a bit */
+html {
+  height: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  font-family: Arial;
+  font-size: 16px;
+  height: 100%;
+}
+
+#navbar{
+  background-color: #222;
+}
+
+#navwrapper{
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#navbar ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#navbar ul li{
+  display: inline-block;
+}
+
+#navbar ul li:hover{
+  background-color: #ecf0f1;
+}
+
+#navbar ul li a {
+  color: #bbb;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover{
+  color: #27ae60;;
+  text-decoration: none;
+}
+
+#navbar ul li:hover ul{
+  display: block;
+}
+
+#navbar ul ul {
+  display: none;
+  position: absolute;
+  background-color: #ecf0f1;
+  border: 5px solid #222;
+  border-top: 0;
+  margin-left: -5px;
+}
+
+#navbar ul ul li{
+  display: block;
+}
+
+#navbar ul ul li a {
+  color: #bbb;
+}
+
+#navbar ul ul li a:hover {
+  color: #27ae60;
+} 
+/*end of css for navbar*/
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+  color: white;
+  min-height: 94%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  width: 40%;
+  height: 40px;
+  font-size: 1.2em;
+  border: 2px solid #222;
+  border-radius: 5px;
+}
+
+
+select {
+  width: 12%;
+  display: inline;
+  margin: 2.5%;
+  height: 47px;
+  font-size: 1.2em;
+  border: 2px solid #222;
+}
+
+#text {
+  margin: 2.5%;
+}
+
+#totalBill {
+  width: 15%;
+  display: inline;
+}
+
+.fa, fa-usd {
+  color: #000;
+  font-size: 1.2em;
+}
+
+div {
+  color: #222;
+  font-size: 1em;
+}
+
+footer {
+  background-color: #27ae60;
+  position: absolute;
+  height: 10%;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+#footerContainer {
+  background-color: #27ae60;
+  width: 960px;
+}
+
+li{
+  list-style-type: none;
+}
+
+#prevTitle {
+  width: 40%;
+  font-size: 1.4em;
+  color: #e74c3c;
+  margin-left: 3%;
+  display: inline;
+  position: absolute;
+}
+
+#prevPrice {
+  font-size: 1.4em;
+  color: #e74c3c;
+  margin-left: 49%;
+  width: 15%;
+  display: inline;
+  position: absolute;
+}
+
+#submittedInvoice {
+  margin-top: 4%;
+  margin-left: 3%;
+}
+
+#subTitle {
+  font-size: 1.4em;
+  color: #27ae60;
+  display: inline-block;
+  min-width: 40%;
+  margin-top: 2%;
+}
+
+#subPrice {
+  font-size: 1.4em;
+  color: #27ae60;
+  display: inline-block;
+  margin-top: 2%;
+  margin-left: 7%;
+  min-width: 15%;
+}
+
+button {
+  font-size: 1em;
+  width: 10%;
+  display: inline;
+  margin: 2.5%;
+  background-color: #27ae60; 
+  height: 40px;
+  /*border: 1px solid black;*/
+}
+
