@@ -103,13 +103,15 @@ input {
   border-radius: 5px;
 }
 
-select {
-  width: 12%;
-  display: inline;
-  margin: 2.5%;
+#selector {
+  width: 15%;
+  display: block;
+  color: #aaa;
+  margin: 5% auto;
   height: 47px;
   font-size: 1.2em;
   border: 2px solid #222;
+  background-color: #fff;
 }
 
 #text {
@@ -119,6 +121,12 @@ select {
 #totalBill {
   width: 15%;
   display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .fa, fa-usd {
@@ -153,7 +161,7 @@ li{
   width: 40%;
   font-size: 1.4em;
   color: #e74c3c;
-  margin-left: 13%;
+  margin-left: 14%;
   float: left;
   display: inline-block;
   text-align: left;
@@ -162,8 +170,8 @@ li{
 #prevPrice {
   font-size: 1.4em;
   color: #e74c3c;
-  margin-right : 22%;
-  width: 20%;
+  margin-right : 26%;
+  width: 15%;
   float: right;
   display: inline-block;
   text-align: left;
@@ -175,6 +183,7 @@ li{
   position: relative;
   width: 98%;
   min-height: 100%;
+  display: block;
 }
 
 #subTitle {
@@ -184,10 +193,9 @@ li{
   display: inline-block;
   width: 40%;
   margin-top: 2%;
-  margin-left: 13%;
+  margin-left: 14%;
   float: left;
-  border: 3px solid #222;
-  border-radius: 5px;
+  border-bottom: 3px solid #222;
 }
 
 #subPrice {
@@ -196,14 +204,13 @@ li{
   color: #27ae60;
   display: inline-block;
   margin-top: 2%;
-  margin-right: 22%;
-  width: 20%;
+  margin-right: 25%;
+  width: 15%;
   float: right;
-  border: 3px solid #222;
-  border-radius: 5px;
+  border-bottom: 3px solid #222;
 }
 
-button {
+.button {
   font-size: 1em;
   width: 10%;
   display: inline;
@@ -216,5 +223,8 @@ button {
 
 p {
   margin: 0;
+  text-align: center;
   padding: 15px;
+  font-size: 1.2em;
+  color: #d3d3d3;
 }

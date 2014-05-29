@@ -3,6 +3,7 @@
 <head>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <title>ReqRent Personal Project</title>
+  <script src='https://platform.venmo.com/sdk.js'></script>
 </head>
 <body>
   <div id="navbar">
@@ -23,17 +24,19 @@
     </div>
   </div>
   <div id="container">
-    <div id="InvoiceForm" ng-controller="InvoiceCtrl">
-      <input id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." />
-  
-     <!--  <select ng-model="people" ng-options="persons for persons in [2,3,4,5,6]" title="Persons" id="numOfPeople" > 
-        <option value> Number of People </option>
-      <select> -->
+    <form name="InvoiceForm" id="InvoiceForm" ng-controller="InvoiceCtrl" novalidate>
+
+      <select id="selector" ng-model="people" ng-options="persons for persons in [2,3,4,5,6]" title="Persons" id="numOfPeople" > 
+        <option value> Num of Peeps </option>
+      <select>
+
+      <input autofocus id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." required/>
 
       <i class="fa fa-usd"></i>
-      <input ng-model="bill.price" id="totalBill" type="text" placeholder="Total Bill" />
+      <input ng-model="bill.price" id="totalBill" type="number" value="0.00" placeholder="Total Bill" required/>
       
-      <button ng-click="addBill()"> Submit </button>
+      <input type="submit" class="button" ng-click="InvoiceForm.$valid && addBill()" /> 
+      <div>{{InvoiceForm.$valid}}</div>
 
       <div id="prevField">
         <div id="prevTitle">
@@ -54,11 +57,11 @@
           </div>
         </li>
       </div>
-    </div>
+    </form>
   </div>
   <footer>
       <div id="footerContainer">
-        <p>alsdjf;laksjf</p>
+        <p>&#169; Brian Son 2014</p>
       </div>
   </footer>
 </body>
