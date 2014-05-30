@@ -10,7 +10,7 @@ body{
   font-family: Arial;
   font-size: 16px;
   height: 100%;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #navbar{
@@ -35,22 +35,29 @@ body{
 }
 
 #navbar ul li:hover{
-  background-color: #ecf0f1;
+  /*background-color: #ecf0f1;*/
 }
 
 #navbar ul li a {
   color: #bbb;
   display: block;
-  padding: 15px;
+  padding: 13px;
   text-decoration: none;
+  border: 5px solid #222;
 }
 
 #navbar ul li a:hover{
-  color: #27ae60;;
+  color: #fff;
   text-decoration: none;
+  border-bottom: 5px solid #27ae60;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 5px solid #222;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-#navbar ul li:hover ul{
+#navbar ul li:hover ul ul{
   display: block;
 }
 
@@ -76,6 +83,36 @@ body{
 } 
 /*end of css for navbar*/
 
+
+/*css for image here*/
+
+
+#banner {
+  width: 100%;
+  min-height: 400px;
+  background: url("../../images/house-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+#banner-head {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  margin-top: 12%;
+  margin-bottom: 0;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#blackbar {
+  width: 100%;
+  min-height: 3em;
+  background-color: #222;
+}
+
+/*css for container form starts here*/
 #container {
   width: 80%;
   margin: 0 auto;
@@ -85,6 +122,7 @@ body{
   position: relative;
   display: block;
   overflow-y: scroll;
+  text-align: center;
 }
 
 #InvoiceForm {
@@ -210,14 +248,13 @@ li{
   border-bottom: 3px solid #222;
 }
 
-.button {
+button {
   font-size: 1em;
   width: 10%;
   display: inline;
   margin: 2.5%;
   background-color: #27ae60; 
   height: 40px;
-  /*border: 2px solid gray;*/
   border-radius: 5px;
 }
 

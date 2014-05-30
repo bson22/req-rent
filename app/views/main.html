@@ -9,20 +9,22 @@
   <div id="navbar">
     <div id="navwrapper">
       <ul>
-        <li><a href=""> About Us </a></li>
-        <li><a href="">Inputs</a></li>
-        <li><strong><a id="logo" href=""> ReqRent </a></strong></li>
-        <li><a href=""> Invoice </a></li>
-        <li><a href="">Social</a>
-          <ul>
-            <li><a href="">Youtube</a><li>
-            <li><a href="">Twitter</a><li>
-            <li><a href="">Facebook</a><li>
-          </ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="" id=>ReqRent</a></li>
+        <li><a href="">Contact Us</a></li>
         </li>
       </ul>
     </div>
   </div>
+
+  <div id="banner">
+    <!-- backgorund image here -->
+      <h1 id="banner-head"> Req Rent</h1>
+  </div>
+
+  <div id="blackbar">
+  </div>
+
   <div id="container">
     <form name="InvoiceForm" id="InvoiceForm" ng-controller="InvoiceCtrl" novalidate>
 
@@ -35,7 +37,7 @@
       <i class="fa fa-usd"></i>
       <input ng-model="bill.price" id="totalBill" type="number" value="0.00" placeholder="Total Bill" required/>
       
-      <input type="submit" class="button" ng-click="InvoiceForm.$valid && addBill()" /> 
+      <button ng-click="InvoiceForm.$valid && addBill()"> Submit </button> 
       <div>{{InvoiceForm.$valid}}</div>
 
       <div id="prevField">
