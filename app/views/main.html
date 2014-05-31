@@ -47,7 +47,7 @@
       <input ng-model="bill.price" id="totalBill" type="number" value="0.00" placeholder="Total Bill" required/>
       <!-- on click check if the ng-click is true so make sure the input fields are valid and add the addBill function from InvoiceCtrl -->
       <button ng-click="InvoiceForm.$valid && addBill()"> Submit </button> 
-      <div>{{InvoiceForm.$valid}}</div>
+      <!-- <div>{{InvoiceForm.$valid}}</div> -->  <!-- for debugging --> 
 
       <div id="prevField">
         <div id="prevTitle">
