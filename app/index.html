@@ -17,17 +17,19 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <!-- venmo button -->
         <!-- endbuild -->
   </head>
-  <body ng-app="reqrentApp">
+  <body ng-app="reqrentApp">  <!-- lets it know its an angular app -->
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-
+    <!-- <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
+    <div ui-view></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -47,6 +49,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -54,6 +57,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/invoice.js"></script>
+        <script src="scripts/services/invoiceservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -3,19 +3,19 @@
 angular.module('reqrentApp')
   .controller('InvoiceCtrl', function ($scope) {
 
-  	$scope.invoiceList = [];
+  	$scope.invoiceList = [];  //empty array for the invoiceList
 
-  	$scope.bill = {};
+  	$scope.bill = {};  //empty object to save bills
 
-    $scope.addBill = function() {
-  		$scope.invoiceList.push($scope.bill);
+    $scope.addBill = function() {               //addBill function adds a bill to the invoice list.
+  		$scope.invoiceList.unshift($scope.bill);
   		$scope.bill={};
   		$scope.focusBox();
-
-  		console.log($scope.invoiceList); //for debugging
+      
+      console.log($scope.invoiceList); //for debugging
   	}
 
-  	$scope.focusBox = function () {
+  	$scope.focusBox = function () {                                      //function selects and scrolls to the textfield so you don't have to use your mouse
   		var scrollToElement = document.getElementById("selector")
   		var focusOnElement = document.getElementById("text");
   		focusOnElement.focus();
