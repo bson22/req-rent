@@ -13,7 +13,9 @@ angular.module('reqrentApp')
       $scope.bill={};
   		$scope.focusBox();
 
-      console.log($scope.invoiceList);
+      $scope.total = Invoiceservice.total();
+
+      console.log($scope.total);
   	}
 
   	$scope.focusBox = function () {                                      //function selects and scrolls to the textfield so you don't have to use your mouse
