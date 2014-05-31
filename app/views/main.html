@@ -21,7 +21,7 @@
   <div id="banner">
     <!-- backgorund image here -->
     <div id="banner-wrapper">
-      <h1 id="banner-head"> <strong>R</strong>ent <strong>R</strong>eq </h1>
+      <h1 id="banner-head"> Rent Req </h1>
     </div>
   </div>
 
@@ -29,25 +29,36 @@
   </div>
 
 <!-- container holds the invoice content -->
-  <div id="container">
+  <div id="container" ng-controller="InvoiceCtrl">
     <!-- everything under the form uses the InvoiceCtrl -->
-    <form name="InvoiceForm" id="InvoiceForm" ng-controller="InvoiceCtrl" novalidate ng-submit="InvoiceForm.$valid && addBill()">  
-      <div id="selectorBlock">
-        <!-- ng-options allows me to add multiple options for the selector by giving it an array of options -->
-        <select id="selector" ng-model="people" ng-options="persons for persons in [2,3,4,5,6]" title="Persons" id="numOfPeople" >   
-          <option value> Num of Peeps </option>
-        </select>
-
-        <button id="totalButton"> Total </button> 
-      </div>
+    <form name="InvoiceForm" id="InvoiceForm" novalidate ng-submit="InvoiceForm.$valid && addBill()">  
+     
       <!-- On page load autofocus is focus on this input.  ng-model lets me bind my data for the preview fields and submitted fields -->
       <input autofocus id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." required/>
 
       <i class="fa fa-usd"></i>
-      <input ng-model="bill.price" id="totalBill" type="number" value="0.00" placeholder="Total Bill" required/>
+      <input ng-model="bill.price" id="billAmount" type="number" value="0.00" placeholder="Bill Amount" required/>
       <!-- on click check if the ng-click is true so make sure the input fields are valid and add the addBill function from InvoiceCtrl -->
+
       <button ng-click="InvoiceForm.$valid && addBill()"> Submit </button> 
+
       <!-- <div>{{InvoiceForm.$valid}}</div> -->  <!-- for debugging --> 
+
+      <div id="selectorBlock">
+        <!-- ng-options allows me to add multiple options for the selector by giving it an array of options -->
+        <select id="selector" ng-model="people" ng-options="persons for persons in [2,3,4,5,6]" title="Persons" id="numOfPeople" >   
+          <option value> Num of Peeps </option>
+        </select> 
+      </div>
+
+      <hr>
+
+      <div id="TotalBill">
+        <h1> You Owe: <h1>
+        <div id="">
+          {{total | currency}}
+        </div>
+      </div>
 
       <div id="prevField">
         <div id="prevTitle">

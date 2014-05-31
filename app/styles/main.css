@@ -98,7 +98,7 @@ body{
 #banner-head {
   /*font-family: 'Abril Fatface', cursive;*/
   font-family: 'Lobster', cursive;
-  font-size: 90px;
+  font-size: 125px;
   color: #fff;
   line-height: 400px;
   margin: 0 auto;
@@ -116,7 +116,7 @@ body{
   margin: 0 auto;
   background-color: #ecf0f1;
   color: white;
-  min-height: 685px;
+  min-height: 750px;
   position: relative;
   display: block;
   overflow-y: scroll;
@@ -141,24 +141,30 @@ input {
 
 #selectorBlock {
   display: block;
+  margin: 0 auto;
 }
 
 #selector {
   width: 15%;
-  display: inline-block;
+  display: block;
   color: #aaa;
-  margin: 5% auto;
+  margin: 1% auto;
   height: 47px;
   font-size: 1.2em;
   border: 2px solid #222;
   background-color: #fff;
 }
 
+hr {
+  margin: 5% auto;
+  width: 80%;
+}
+
 #text {
   margin: 2.5%;
 }
 
-#totalBill {
+#billAmount {
   width: 15%;
   display: inline-block;
 }
@@ -218,7 +224,7 @@ li{
 }
 
 #submittedInvoice {
-  margin-top: 4%;
+  margin-top: 5%;
   margin-bottom: 3%;
   position: relative;
   width: 98%;
@@ -232,7 +238,7 @@ li{
   color: #27ae60;
   display: inline-block;
   width: 41%;
-  margin-top: 2%;
+  margin-top: 4%;
   margin-left: 14%;
   float: left;
   border-bottom: 3px solid #222;
@@ -243,7 +249,7 @@ li{
   font-size: 1.4em;
   color: #27ae60;
   display: inline-block;
-  margin-top: 2%;
+  margin-top: 4%;
   margin-right: 25%;
   width: 15%;
   float: right;
