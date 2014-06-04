@@ -1,0 +1,98 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: none;
+	color: #000;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#print-page {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+#banner-head {
+	font-family: 'Lobster', cursive;
+	font-size: 60px;
+}
+
+hr {
+	width: 85%;
+}
+
+#navbar, #navwrapper, #blackbar, #selectorBlock, #selector, input, button, span, p, footer {
+	display: none;
+}
+
+#TotalBill {
+	font-family: 'OpenSans', sans-serif;
+	text-align: center;
+	color: #000;
+	margin-bottom: 50px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+li {
+	list-style-type: none;
+}
+
+#submittedInvoice {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: block; 
+}
+
+#subTitle {
+	text-align: left;
+	font-size: 20px;
+	color: #000;
+	display: inline-block;
+	width: 300px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 60px;
+	float: left;
+	border-bottom: 1px solid #222;
+}
+
+#subPrice {
+	text-align: left;
+	font-size: 20px;
+	color: #000;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 60px;
+	width: 150px;
+	float: right;
+	border-bottom: 1px solid #222;
+}
+
+.entry a:after {
+	content: " [" attr(href)"] ";
+}
+
+
+#printFooter {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	width: 128.7%;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+article {
+	padding: 0;
+	margin: 0;
+}

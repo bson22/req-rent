@@ -99,6 +99,7 @@ body{
   /*font-family: 'Abril Fatface', cursive;*/
   font-family: 'Lobster', cursive;
   font-size: 125px;
+  font-style: italic;
   color: #fff;
   line-height: 400px;
   margin: 0 auto;
@@ -116,7 +117,7 @@ body{
   margin: 0 auto;
   background-color: #ecf0f1;
   color: white;
-  min-height: 750px;
+  min-height: 685px;
   position: relative;
   display: block;
   overflow-y: scroll;
@@ -272,4 +273,8 @@ p {
   padding: 15px;
   font-size: 1.2em;
   color: #d3d3d3;
+}
+
+#print-footer, article {
+  display: none;
 }
