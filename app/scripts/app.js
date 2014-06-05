@@ -9,16 +9,13 @@ angular
   			url: '/',
   			templateUrl: 'views/main.html',
   			controller: 'InvoiceCtrl'
-  			// resolve: {
-
-  			// }
-
-  		// }).state ("", {
-  		// 	url: "",
-  		// 	templateUrl: "",
-  		// 	controller: "",
-  		// 	resolve: {
-
-	  	//	}
-  		});
+  		})
+        .state ('about', {
+  			url: '/about',
+  			templateUrl: 'views/AboutUs.html'
+      })
+        .state ('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html'
+      });
   	});
