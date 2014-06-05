@@ -44,21 +44,20 @@
 
       <!-- <div>{{InvoiceForm.$valid}}</div> -->  <!-- for debugging --> 
 
+      <hr>
+     
       <div id="selectorBlock">
         <!-- ng-options allows me to add multiple options for the selector by giving it an array of options -->
-        <select id="selector" ng-model="people" ng-options="persons for persons in [2,3,4,5,6]" title="Persons" id="numOfPeople" >   
-          <option value> Num of Peeps </option>
+        <p id="numPeople"> Number of People: </p>
+        <select id="selector" ng-model="people" ng-options="persons for persons in peoples" title="Persons" id="numOfPeople" >   
+          
         </select> 
       </div>
 
-      <hr>
       <div id="print-page">
         <div id="TotalBill">
-          <h1> You Owe: <h1>
-          <div id="">
-            {{total | currency}}
-          </div>
-        </div>
+          <h1> You Owe: {{total | currency}}  /  {{people}} = {{total/people | currency}}<h1>
+        </div>  
 
         <div id="prevField">
           <div id="prevTitle">

@@ -86,9 +86,8 @@ li {
 	display: block;
 	position: fixed;
 	bottom: 0;
-	width: 128.7%;
-	text-align: center;
-	padding: 0;
+	margin: 0;
+	padding-left: 225px;
 	margin: 0;
 }
 

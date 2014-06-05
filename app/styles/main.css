@@ -127,6 +127,7 @@ body{
 #InvoiceForm {
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 3%;
   position: absolute;
   min-height: 100%;
 }
@@ -136,8 +137,14 @@ input {
   width: 40%;
   height: 40px;
   font-size: 1.2em;
-  border: 2px solid #d3d3d3;
+  border: 2px solid #222;
   border-radius: 5px;
+}
+
+#numPeople {
+  display: inline;
+  color: #222;
+  font-size: 1.3em;
 }
 
 #selectorBlock {
@@ -147,8 +154,8 @@ input {
 
 #selector {
   width: 15%;
-  display: block;
-  color: #aaa;
+  display: inline;
+  color: #222;
   margin: 1% auto;
   height: 47px;
   font-size: 1.2em;
@@ -157,17 +164,24 @@ input {
 }
 
 hr {
-  margin: 5% auto;
+  margin: 3.5% auto;
   width: 80%;
+}
+
+#TotalBill {
+  line-height: 50px;
+  color: #222;
 }
 
 #text {
   margin: 2.5%;
+  color: #222;
 }
 
 #billAmount {
   width: 15%;
   display: inline-block;
+  color: #222;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -239,7 +253,7 @@ li{
   color: #27ae60;
   display: inline-block;
   width: 41%;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 14%;
   float: left;
   border-bottom: 3px solid #222;
@@ -250,7 +264,7 @@ li{
   font-size: 1.4em;
   color: #27ae60;
   display: inline-block;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-right: 25%;
   width: 15%;
   float: right;

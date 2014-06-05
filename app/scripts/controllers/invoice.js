@@ -10,14 +10,20 @@ angular.module('reqrentApp')
 
     $scope.total = 0;
 
+    $scope.peoples = [1, 2, 3, 4, 5, 6, 7];
+
+    $scope.people = $scope.peoples[0];
+
     $scope.addBill = function() {               //addBill function adds a bill to the invoice list.	
   		Invoiceservice.addBill($scope.bill);
       $scope.bill={};
       $scope.focusBox();
+      // $scope.people = $scope.people[0];
       $scope.total = Invoiceservice.total();
-
+     
+      console.log($scope.people);
       console.log($scope.total);
-  	}
+  	};
 
   	$scope.focusBox = function () {                                      //function selects and scrolls to the textfield so you don't have to use your mouse
   		var scrollToElement = document.getElementById("text")

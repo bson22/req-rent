@@ -5,20 +5,25 @@ angular.module('reqrentApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
    var invoiceList = [];
 
+   // var numOfPeople = document.getElementById("selector");
+
+   // var optionVal = parseInt(numOfPeople.options[numOfPeople.selectedIndex].text);
+
    var addBill =  function (bill) {
    		invoiceList.unshift(bill);
    };
 
-   var total = function () {
-      var totalSum = 0;
+  var total = function () {
+    console.log('service total was called')
+    var totalSum = 0;
 
-      for (var i = 0; i < invoiceList.length; i++) {
-        var bill = invoiceList[i];
-        totalSum += bill.price;
-      }
+    for (var i = 0; i < invoiceList.length; i++) {
+      var bill = invoiceList[i];
+      totalSum += bill.price;
+    }
 
-      return totalSum;
-   };
+    return totalSum;
+  };
 
    // Anythouhing returned in this object is available outside the service.
    return { 
