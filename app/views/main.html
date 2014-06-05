@@ -32,28 +32,15 @@
   <div id="container" ng-controller="InvoiceCtrl">
     <!-- everything under the form uses the InvoiceCtrl -->
     <form name="InvoiceForm" id="InvoiceForm" novalidate>  
-     
-      <!-- On page load autofocus is focus on this input.  ng-model lets me bind my data for the preview fields and submitted fields -->
-      <input autofocus id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." required/>
-
-      <span> <i class="fa fa-usd"></i> </span>
-      <input ng-model="bill.price" id="billAmount" type="number" value="0.00" placeholder="Bill Amount" required/>
-      <!-- on click check if the ng-click is true so make sure the input fields are valid and add the addBill function from InvoiceCtrl -->
-
-      <button ng-click="InvoiceForm.$valid && addBill()"> Submit </button> 
-
-      <!-- <div>{{InvoiceForm.$valid}}</div> -->  <!-- for debugging --> 
-
-      <hr>
 
       <div id="print-page">
         <div id="TotalBill">
-          <h1> Total Bill: {{total | currency}}</h1>
+          <h3> Total Bill: {{total | currency}}</h3>
         </div>
         
         <div id="selectorBlock">
           <!-- ng-options allows me to add multiple options for the selector by giving it an array of options -->
-          <h1 id="numPeople"> Number of People: </h1>
+          <h3 id="numPeople"> Number of People: </h3>
           <select id="selector" ng-model="people" ng-options="persons for persons in peoples" title="Persons" id="numOfPeople" >    
           </select> 
         </div>
@@ -62,14 +49,27 @@
           <h1> You Owe: {{total/people | currency}}<h1>
         </div>  
 
-        <div id="prevField">
+        <hr>
+
+<!-- On page load autofocus is focus on this input.  ng-model lets me bind my data for the preview fields and submitted fields -->
+        <input autofocus id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." required/>
+
+        <span> <i class="fa fa-usd"></i> </span>
+        <input ng-model="bill.price" id="billAmount" type="number" value="0.00" placeholder="Bill Amount" required/>
+      <!-- on click check if the ng-click is true so make sure the input fields are valid and add the addBill function from InvoiceCtrl -->
+
+        <button ng-click="InvoiceForm.$valid && addBill()"> Submit </button> 
+
+      <!-- <div>{{InvoiceForm.$valid}}</div> -->  <!-- for debugging --> 
+<!-- Preview for Debugging and Live Updating -->
+<!--         <div id="prevField">   
           <div id="prevTitle">
             {{bill.title}}
           </div>   
           <div id="prevPrice">
             {{bill.price | currency}}
           </div>
-        </div>
+        </div> -->
 
         <div id="submittedInvoice">
           <li ng-repeat="invoice in invoiceList">

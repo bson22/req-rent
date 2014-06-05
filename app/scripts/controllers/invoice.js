@@ -26,7 +26,7 @@ angular.module('reqrentApp')
   	};
 
   	$scope.focusBox = function () {                                      //function selects and scrolls to the textfield so you don't have to use your mouse
-  		var scrollToElement = document.getElementById("text")
+  		var scrollToElement = document.getElementById("TotalBill")
   		var focusOnElement = document.getElementById("text");
   		focusOnElement.focus();
   		scrollToElement.scrollIntoView();

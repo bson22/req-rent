@@ -23,7 +23,7 @@ hr {
 	width: 85%;
 }
 
-#navbar, #navwrapper, #blackbar, #selectorBlock, #selector, input, button, span, p, footer {
+#navbar, #navwrapper, #blackbar, input, button, span, p, footer {
 	display: none;
 }
 
@@ -31,15 +31,41 @@ hr {
 	font-family: 'OpenSans', sans-serif;
 	text-align: center;
 	color: #000;
-	margin-bottom: 50px;
+	margin-bottom: 0;
 }
 
 h1 {
 	font-size: 30px;
+	font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#numPeople {
+	display: inline;
 }
 
 li {
 	list-style-type: none;
+}
+
+#selectorBlock {
+  display: block;
+  margin: 0 auto;
+}
+
+#selector {
+  width: 50px;
+  display: inline;
+  color: #222;
+  margin: 0 auto;
+  height: 47px;
+  font-size: 15px;
+  border: 2px solid #222;
+  background-color: #fff;
 }
 
 #submittedInvoice {
