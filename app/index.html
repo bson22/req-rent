@@ -32,6 +32,17 @@
 
     <!-- Add your site or application content here -->
     <!-- <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
+    
+    <div id="navbar">
+        <div id="navwrapper" ng-controller="ActiveClassCtrl">
+          <ul>
+            <li ng-class="{active: isActive('/about)}"><a ui-sref="about"> About Us </a></li>
+            <li><a ui-sref="main"><strong> Rent Req </strong></a></li>
+            <li ng-class="{active: isActive('/contact)}"><a ui-sref="contact"> Contact Us </a></li>
+          </ul>
+        </div>
+    </div>
+
     <div ui-view>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -61,6 +72,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/invoice.js"></script>
         <script src="scripts/services/invoiceservice.js"></script>
+        <script src="scripts/controllers/active-class.js"></script>
         <!-- endbuild -->
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 </body>

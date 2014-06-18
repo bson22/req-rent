@@ -3,18 +3,18 @@
 <head>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <title>RentReq Personal Project</title>
-  <script src='https://platform.venmo.com/sdk.js'></script>
+
 </head>
 <body>
-  <div id="navbar">
+  <!-- <div id="navbar" ng-controller="ActiveClassCtrl">
     <div id="navwrapper">
       <ul>
-        <li><a ui-sref="about"> About Us </a></li>
-        <li><a ui-sref="main"><strong> Rent Req </strong></a></li>
-        <li><a ui-sref="contact"> Contact Us </a></li>
+        <li ng-class="{active: isActive('/about')}"><a ui-sref="about"> About Us </a></li>
+        <li ng-class="{active: isActive('/')}"><a ui-sref="main"><strong> Rent Req </strong></a></li>
+        <li ng-class="{active: isActive('/ContactUs')}"><a ui-sref="contact"> Contact Us </a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 
 <!-- banner code starts here -->
   <div id="banner">
@@ -27,19 +27,16 @@
   <div id="blackbar">
   </div>
 
+
 <!-- container holds the invoice content -->
   <div id="container" ng-controller="InvoiceCtrl">
     <!-- everything under the form uses the InvoiceCtrl -->
     <form name="InvoiceForm" id="InvoiceForm" novalidate>  
 
-      <div id="print-page">
-        <div id="TotalBill">
-          <h3> Total Bill: {{total | currency}}</h3>
-        </div>
-        
+      <div id="print-page">        
         <div id="selectorBlock">
           <!-- ng-options allows me to add multiple options for the selector by giving it an array of options -->
-          <h3 id="numPeople"> Number of People: </h3>
+          <h3 id="numPeople">Total Bill: {{total | currency}} / Number of People: </h3>
           <select id="selector" ng-model="people" ng-options="persons for persons in peoples" title="Persons" id="numOfPeople" >    
           </select> 
         </div>
@@ -47,8 +44,6 @@
         <div id="youOwe">
           <h1> You Owe: {{total/people | currency}}<h1>
         </div>  
-
-        <hr>
 
 <!-- On page load autofocus is focus on this input.  ng-model lets me bind my data for the preview fields and submitted fields -->
         <input autofocus id="text" ng-model="bill.title" type="text" name="text" placeholder="Base Rent, Gas, Electric, Groceries, etc..." required/>

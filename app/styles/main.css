@@ -6,7 +6,6 @@ html {
 body{
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   height: 100%;
@@ -48,7 +47,7 @@ body{
 #navbar ul li a:hover{
   color: #fff;
   text-decoration: none;
-  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid #27ae60;
   border-left: 0px;
   border-right: 0px;
   border-top: 5px solid #222;
@@ -80,6 +79,14 @@ body{
 #navbar ul ul li a:hover {
   color: #27ae60;
 } 
+
+#navbar ul li a:active {
+  background-color: #27ae60;
+}
+
+.active {
+  background-color: #27ae60;
+}
 /*end of css for navbar*/
 
 
@@ -118,9 +125,9 @@ body{
   background-color: #ecf0f1;
   color: white;
   min-height: 685px;
-  position: relative;
+  /*position: relative;*/
   display: block;
-  overflow-y: scroll;
+  overflow-y: auto;
   text-align: center;
 }
 
@@ -128,7 +135,6 @@ body{
   width: 100%;
   margin: 0 auto;
   padding-bottom: 3%;
-  position: absolute;
   min-height: 100%;
 }
 
@@ -150,38 +156,42 @@ h1 {
   color: #27ae60;
   font-size: 1.6em;
   font-weight: bold;
+  margin-bottom: 5%;
+  margin-top: 0;
 }
 
 h3 {
+  display: inline;
   color: #222;
   font-size: 1.6em;
   font-weight: bold;
 }
 
 #selectorBlock {
-  display: block;
-  margin: 0 auto;
+  margin: 5%;
 }
 
 #selector {
-  width: 50px;
+  width: 60px;
   display: inline;
   color: #222;
-  margin: 1% auto;
+  margin: 0 auto;
   height: 47px;
   font-size: 1.2em;
   border: 2px solid #222;
   background-color: #fff;
 }
 
-hr {
-  margin: 3.5% auto;
+#youOwe {
+  border-bottom: 2px solid #222;
   width: 80%;
+  margin: 0 auto;
 }
 
 #TotalBill {
   line-height: 50px;
   color: #222;
+  display: inline;
 }
 
 #youOwe {
@@ -192,6 +202,7 @@ hr {
 
 #text {
   margin: 2.5%;
+  margin-top: 5%;
   color: #222;
 }
 
@@ -220,6 +231,7 @@ div {
 footer {
   background-color: #27ae60;
   position: relative;
+  bottom: 0;
   width: 100%;
   margin: 0 auto;
 }
@@ -303,7 +315,7 @@ p {
   text-align: center;
   padding: 15px;
   font-size: 1.2em;
-  color: #d3d3d3;
+  color: #222;
 }
 
 #print-footer, article {

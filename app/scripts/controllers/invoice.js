@@ -10,7 +10,7 @@ angular.module('reqrentApp')
 
     $scope.total = 0;
 
-    $scope.peoples = [1, 2, 3, 4, 5, 6, 7];
+    $scope.peoples = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
     $scope.people = $scope.peoples[0];
 
@@ -26,7 +26,7 @@ angular.module('reqrentApp')
   	};
 
   	$scope.focusBox = function () {                                      //function selects and scrolls to the textfield so you don't have to use your mouse
-  		var scrollToElement = document.getElementById("TotalBill")
+  		var scrollToElement = document.getElementById("selectorBlock")
   		var focusOnElement = document.getElementById("text");
   		focusOnElement.focus();
   		scrollToElement.scrollIntoView();
